@@ -34,11 +34,14 @@
       <div class="col-3 mt-5">
         
       </div>
-      <% for(var i=0; i<comment.length; i++) {%>
+      <% for(var i= 0; i < comment.length; i++)
+      {
+        if(post.id==comment[i].postid)
+       {%>
         <h2>
           <%=comment[i].comment %>
         </h2>
-      <%}%>
+      <%}}%>
         <div class="col-6 mt-5">
           <a class="btn btn-primary" href="/profile">Return to Profile</a>
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
